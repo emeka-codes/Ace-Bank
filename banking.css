@@ -1,0 +1,570 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+h1{
+    font-size: 48px;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 32px;
+}
+h4{
+    font-size: 24px;
+}
+h5{
+    font-size: 16px;
+    font-weight: 500;
+}
+h6{
+    font-size: 14px;
+}
+body{
+    width: 100vw;
+    background-color: white;
+    font-family: 'Br firma';
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'Br firma' ;
+    src: url('c:\Users\ugoch\Downloads\br-firma\BR Firma Black Italic.otf');
+    src: url('c:\Users\ugoch\Downloads\br-firma\BR Firma Black.otf');
+    src: url('c:\Users\ugoch\Downloads\br-firma\BR Firma Bold Italic.otf');
+    src: url('c:\Users\ugoch\Downloads\br-firma\BR Firma Bold.otf');
+    src: url('c:\Users\ugoch\Downloads\br-firma\BR Firma Extra Light Italic.otf');
+    src: url('c:\Users\ugoch\Downloads\br-firma\BR Firma Light Italic.otf c:\Users\ugoch\Downloads\br-firma\BR Firma Extra Light.otf');
+    src: url('c:\Users\ugoch\Downloads\br-firma\BR Firma Thin.otf c:\Users\ugoch\Downloads\br-firma\BR Firma Light.otf c:\Users\ugoch\Downloads\br-firma\BR Firma Medium Italic.otf c:\Users\ugoch\Downloads\br-firma\BR Firma Medium.otf c:\Users\ugoch\Downloads\br-firma\BR Firma Regular Italic.otf c:\Users\ugoch\Downloads\br-firma\BR Firma Regular.otf c:\Users\ugoch\Downloads\br-firma\BR Firma SemiBold Italic.otf c:\Users\ugoch\Downloads\br-firma\BR Firma SemiBold.otf c:\Users\ugoch\Downloads\br-firma\BR Firma Thin Italic.otf');
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 64px;
+    position: fixed;
+    background-color: white;
+    height: 4rem;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  
+}
+#navbar .left-navbar{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.image{
+    width: 32px;
+}
+#navbar .middle-navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+#navbar .middle-navbar ul li{
+    list-style: none;
+    position: relative;
+    transition: all 6000ms ease;
+}
+#navbar .middle-navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+#navbar .middle-navbar li .active::after{
+    content: '';
+    width: 28px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 8px;
+    
+}
+#navbar .middle-navbar li:hover::after,
+#navbar .middle-navbar li .active::after{
+    content: '';
+    width: 28px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 8px;
+
+}
+#navbar .right-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+#navbar .right-navbar button{
+    background-color: #e55d87;
+    padding: 8px 12px;
+    border-radius: 12px;
+    color: white;
+    font-size: 12px;
+}
+#navbar .right-navbar button:nth-child(2){
+    background: none;
+    border: 0.5px solid #e55d87;
+    color: #e55d87;
+   
+}
+#hero{
+    display: flex;
+    justify-content: space-between;
+    
+    margin-top: 140px;
+    margin-bottom: 0;
+    padding-left:  64px;
+  padding-right: 64px;
+}
+#hero .left-hero{
+    width: 450px;
+    height: 634px;
+}
+#hero .middle-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 3rem;
+    width: 30vw;
+    margin-top: 80px;
+}
+#hero .middle-hero h5{
+    font-weight: 500;
+    text-align: left;
+    width: 75%;
+}
+#hero .middle-hero h6{
+    color: white;
+    background-color: #e55d87;
+    text-align: center;
+    padding: 12px;
+    border-radius: 20px;
+}
+#hero .right-hero{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+#hero .right-hero .percent{
+    display: flex;
+}
+#hero .right-hero .top-right-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e55d87;
+    padding: 6px 20px;
+    border-radius: 12px;
+}
+#hero .right-hero .top-right-hero h2{
+    color: white;
+    font-weight: 600;
+    font-size: 36px;
+}
+#hero .right-hero .features{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border: 1.5px solid #e55d87;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 12px;
+}
+#hero .right-hero .features h6{
+    text-align: center;
+    color: #e55d87;
+    font-weight: 500;
+}
+#services{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 140px;
+    padding: 0 64px;
+    width: 100vw;
+}
+#services .left-services{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+#services .left-services h5{
+    margin-top: 48px;
+    margin-bottom: 64px;
+}
+.learn-button{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #e55d87;
+    width: 50%;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 12px;
+}
+.learn-button h6{
+    color: white;
+}
+#services .right-services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 44vw;
+}
+#services .right-services .general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 12px;
+}
+#services .right-services .general h5{
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+#services .right-services .loans{
+    background-color: rgb(235, 235, 235);
+    margin-right: 32px;
+    height: 12rem;
+    width: 14rem;
+    justify-content: center;
+}
+#services .right-services .wealth{
+    background-color: rgb(235, 235, 235);
+    height: 12rem;
+    width: 14rem;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+#services .right-services .checking{
+    background-color: rgb(235, 235, 235);
+    margin-right: 32px;
+    height: 12rem;
+    width: 14rem;
+    justify-content: center;
+}
+#services .right-services .international{
+    background-color: rgb(235, 235, 235);
+    height: 12rem;
+    width: 14rem;
+    justify-content: center;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 64px;
+    margin-top: 140px;
+}
+#about .bottom-about{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    width: 100vw;
+    padding-left: 64px;
+    padding-right: 64px;
+   
+}
+#about .bottom-about .left-bottom{
+    width: 560px;
+}
+#about .bottom-about .right-bottom{
+    display: flex;
+    flex-direction: column;
+    width: 36vw;
+    margin-top: 120px;
+}
+#about .bottom-about .right-bottom .mission{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 40px;
+}
+#about .bottom-about .right-bottom .vision{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 40px;
+}
+#about .bottom-about .right-bottom .core-values{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 80px;
+}
+#about .bottom-about .right-bottom .core-values ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 18px;
+}
+#about .bottom-about .right-bottom .buttons{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    
+}
+#about .bottom-about .right-bottom .buttons .about-button{
+    display: flex;
+    gap: 2rem;
+}
+#impact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 0 64px;
+    margin-top: 180px;
+}
+#features{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 64px;
+    margin-top: 200px;
+    align-items: center;
+}
+#features .bottom-features{
+    display: flex;
+    gap: 2rem;
+    width: 100vw;
+    justify-content: space-between;
+    margin-top: 80px;
+    padding-left: 64px;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.bg-pic{
+    width: 20rem;
+    height: 12rem;
+}
+.sme{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 0 16px;
+    position: absolute;
+    bottom: 0.5rem;
+}
+.sme h6{
+    color: white;
+}
+.first-card img{
+    border-radius: 20px;
+}
+.second-card img{
+    border-radius: 20px;
+}
+.third-card img{
+    border-radius: 20px;
+}
+.fourth-card img{
+    border-radius: 20px;
+}
+#features .bottom-features .first-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20rem;
+    height: 12rem;
+    align-items: center;
+    border-radius: 20px;
+}
+#features .bottom-features .second-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20rem;
+    height: 12rem;
+    align-items: center;
+}
+#features .bottom-features .third-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20rem;
+    height: 12rem;
+    align-items: center;
+}
+#features .bottom-features .fourth-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20rem;
+    height: 12rem;
+    align-items: center;
+}
+#mobile-app{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 64px;
+    margin-top: 200px;
+    width: 100vw;
+    background-color: #e55d87;
+
+}
+#mobile-app .left-mobile-app{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 40vw;
+}
+#mobile-app .left-mobile-app h2{
+    color: white;
+}
+#mobile-app .left-mobile-app h5{
+    color: white;
+}
+#mobile-app .right-mobile-app{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+#mobile-app .right-mobile-app img{
+    border-radius: 20px;
+}
+#mobile-app .right-mobile-app .google-play{
+    width: 14rem;
+}
+#mobile-app .right-mobile-app .app-store{
+    width: 14rem;
+}
+#reviews{
+    display: flex;
+    flex-direction: column;
+    padding: 0 64px;
+    width: 100vw;
+    margin-top: 140px;
+}
+#reviews .bottom-review{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 118vw;
+    margin-top: 80px;
+    padding-right: 0;
+}
+.duke{
+    width: 4rem;
+    height: 4rem;
+}
+.gen{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 22rem;
+    height: 24rem;
+    background-color: #ededed ;
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+.gen h5{
+    font-weight: bold;
+}
+.gen h6{
+    font-weight: 500;
+}
+.top-gen{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#faq{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0 64px;
+    width: 100vw;
+    margin-top: 180px;
+    align-items: center;
+}
+.drop-down{
+    display: flex;
+    justify-content: space-between;
+    gap: 32rem;
+    margin-bottom: 64px;
+    padding: 12px 32px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#footer{
+    width: 100vw;
+    display: flex;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-bottom: 48px;
+    padding-top: 48px;
+    margin-top: 180px;
+    justify-content: space-between;
+    background-color: #ededed;
+}
+#footer .left-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: flex-start;
+}
+#footer .left-footer .top-left-footer{
+    display: flex;
+    gap: 1rem;
+}
+#footer .left-footer .bottom-left-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#footer .right-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+}
+.gen-right-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.gen-right-footer h5{
+    font-weight: bold;
+}
+.gen-right-footer h6{
+    font-weight: 500;
+}
+.english-drop-down{
+    display: flex;
+    gap: 2rem;
+    background-color: black;
+    padding: 4px 12px;
+    height: 3rem;
+    align-items: center;
+    border-radius: 20px;
+}
+.english-drop-down h5{
+    color: white;
+}
